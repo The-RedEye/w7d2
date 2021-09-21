@@ -1361,3 +1361,79 @@ Started POST "/__better_errors/a58e6f388b746c76/variables" for ::1 at 2021-09-21
   ↳ /Users/macbook/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
   [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" LIMIT $1[0m  [["LIMIT", 11]]
   ↳ /Users/macbook/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Started GET "/bands/index" for ::1 at 2021-09-21 15:36:49 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/macbook/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/bands/index.html.erb:16:in `'
+  app/controllers/bands_controller.rb:4:in `index'
+
+Started POST "/__better_errors/ee75c73477dd6d43/variables" for ::1 at 2021-09-21 15:36:49 -0400
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/macbook/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Started GET "/bands/index" for ::1 at 2021-09-21 15:37:39 -0400
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/Users/macbook/Coding/aA-classwork/wk7/d2/music_app/app/views/bands/index.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/macbook/Coding/aA-classwork/wk7/d2/music_app/app/views/bands/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/bands/index.html.erb:11:in `'
+  app/controllers/bands_controller.rb:4:in `index'
+
+Started POST "/__better_errors/ced3bcbd5725dbfa/variables" for ::1 at 2021-09-21 15:37:39 -0400
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/macbook/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Started GET "/bands/index" for ::1 at 2021-09-21 15:38:09 -0400
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/Users/macbook/Coding/aA-classwork/wk7/d2/music_app/app/views/bands/index.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/macbook/Coding/aA-classwork/wk7/d2/music_app/app/views/bands/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/bands/index.html.erb:11:in `'
+  app/controllers/bands_controller.rb:4:in `index'
+
+Started POST "/__better_errors/ce142368d57687d3/variables" for ::1 at 2021-09-21 15:38:09 -0400
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/macbook/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Started GET "/bands/index" for ::1 at 2021-09-21 15:40:11 -0400
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:7
+  Rendered bands/index.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+Completed 200 OK in 376ms (Views: 371.1ms | ActiveRecord: 3.6ms)
+
+
