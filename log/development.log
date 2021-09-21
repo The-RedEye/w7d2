@@ -1462,3 +1462,49 @@ Migrating to CreateAlbums (20210921194512)
   ↳ bin/rails:9
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/bands/new" for ::1 at 2021-09-21 16:39:05 -0400
+  [1m[35m (12.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/macbook/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by BandsController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 1):
+  app/models/band.rb:6:in `<class:Band>'
+  app/models/band.rb:1:in `<top (required)>'
+  app/controllers/bands_controller.rb:19:in `new'
+
+Started POST "/__better_errors/56a8aef625ca51b3/variables" for ::1 at 2021-09-21 16:39:05 -0400
+Started GET "/bands/new" for ::1 at 2021-09-21 16:39:56 -0400
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (411.1ms)
+  Rendered bands/new.html.erb within layouts/application (415.7ms)
+Completed 500 Internal Server Error in 474ms (ActiveRecord: 13.1ms)
+
+
+
+NameError - undefined local variable or method `action_url' for #<#<Class:0x00007fe061cf7918>:0x00007fe061cf5fa0>
+Did you mean?  audio_url:
+  app/views/bands/_form.html.erb:3:in `_app_views_bands__form_html_erb___941037099342064305_70300848387860'
+  app/views/bands/new.html.erb:7:in `_app_views_bands_new_html_erb__3304156641037122607_70300845188700'
+  app/controllers/bands_controller.rb:20:in `new'
+
+Started POST "/__better_errors/5d8bc9233af69690/variables" for ::1 at 2021-09-21 16:39:58 -0400
+Started GET "/bands/new" for ::1 at 2021-09-21 16:41:10 -0400
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (583.3ms)
+  Rendered bands/new.html.erb within layouts/application (590.0ms)
+Completed 500 Internal Server Error in 606ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `bands_url' for #<#<Class:0x00007fe061cf7918>:0x00007fe05a129ca0>
+Did you mean?  bands_new_url:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb___941037099342064305_70300848773480'
+  app/views/bands/new.html.erb:7:in `_app_views_bands_new_html_erb__3304156641037122607_70300780283100'
+  app/controllers/bands_controller.rb:20:in `new'
+
+Started POST "/__better_errors/d099e6aa288d5c4c/variables" for ::1 at 2021-09-21 16:41:12 -0400
